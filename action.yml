@@ -1,0 +1,19 @@
+name: 'Spotlight build uploader'
+description: 'Extract jira ticket from any string'
+inputs:
+  apiKey:  # id of input
+    description: 'Spotlight project api key'
+    required: true
+  buildName:  # id of input
+    description: 'Name of the build (Develop, Production, ...)'
+    required: false
+  buildVersion:  # id of input
+    description: 'Build version (1.0.0, 1.0.0-123)'
+    required: true
+  files:  # id of input
+    description: 'files to upload'
+    required: true
+  
+runs:
+  using: 'node16'
+  main: 'index.js'
