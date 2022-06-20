@@ -1,7 +1,8 @@
 name: Create
 on:
   push:
-    - "main"
+    branches:
+      - 'main'
   
 jobs:
   build:
