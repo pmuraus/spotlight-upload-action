@@ -11,7 +11,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: upload build
-      uses: pmuraus/spotlight-upload-action
+      uses: pmuraus/spotlight-upload-action@main
       with: 
         - buildName: "Action build"
         - buildVersion: "1.1.1"
