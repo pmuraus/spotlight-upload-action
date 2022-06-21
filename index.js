@@ -15,14 +15,16 @@ const opts = {
     baseUrl: BASE_URL,
 }
 
+console.log("here")
 let fileList = core.getInput("files").split(",")
 let n = core.getInput("buildName")
 let v = core.getInput("buildVersion")
-
+console.log("here2")
 const uploadBuilds = (key) => {
     return inspect.inspectBuildFilesForUpload(fileList)
         .then(({ buildInfo, fileList }) => {
-            destBase = 'builds';
+            console.log("here3")
+             destBase = 'builds';
             log.printObject('Information collected from files', buildInfo);
             const version = v || buildInfo.version;
             if (!version) {
@@ -43,6 +45,7 @@ const uploadBuilds = (key) => {
                 dest: path.posix.join('builds', sanitize(name), muver.clean(version), path.basename(f.file)),
                 ...f
             }))
+            console.log("here4")
             opts.apiKey = key;
             const inuit = new Inuit(opts);
             return inuit.uploadAll(uploadList);
