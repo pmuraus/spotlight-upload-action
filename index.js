@@ -40,6 +40,8 @@ const uploadBuilds = (key) => {
             opts.apiKey = key;
             const inuit = new Inuit(opts);
             return inuit.uploadAll(uploadList);
+        }).catch(err => {
+            core.setFailed(err.message);
         });
 }
 
