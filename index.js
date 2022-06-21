@@ -17,6 +17,7 @@ const opts = {
 
 console.log("here")
 let fileList = core.getInput("files").split(",")
+console.log(JSON.stringify(fileList, null, 2))
 let n = core.getInput("buildName")
 let v = core.getInput("buildVersion")
 console.log("here2")
