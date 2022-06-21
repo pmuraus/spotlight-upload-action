@@ -44,7 +44,7 @@ const fromJsonFileContent = (fileContent) => {
 }
 
 const getSwaggerContentType = (swaggerObject, isYaml = false) => {
-  return isSwaggerObject(swaggerObject) ? (isYaml ? 'application/vnd.oai.openapi' : 'application/vnd.oai.openapi+json') : (isYaml ? 'application/json' : 'application/x-yaml')
+  return isSwaggerObject(swaggerObject) ? (isYaml ? 'application/vnd.oai.openapi' : 'application/vnd.oai.openapi+json') : (isYaml ? 'application/x-yaml' : 'application/json')
 }
 
 module.exports = {

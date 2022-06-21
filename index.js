@@ -8,21 +8,19 @@ const log = require("./log")
 
 const Inuit = require('./inuit')
 const fs = require('fs')
-let apiKey = "wD0yhCoraQ78-EjgC-i_BnbBQtM"
 const BASE_URL = process.env.SPOTLIGHT_URL || 'https://spotlight.inova.si/f';
 
 const opts = {
     baseUrl: BASE_URL,
 }
 
-console.log("here")
+let apiKey = core.getInput("apiKey")
 let fileList = core.getInput("files").split(",")
-console.log(JSON.stringify(fileList, null, 2))
-console.log(fs.existsSync(fileList[0]))
-console.log(fs.existsSync(fileList[1]))
 let n = core.getInput("buildName")
 let v = core.getInput("buildVersion")
-console.log("here2")
+// let fileList = "./tools/package.json".split(",")
+// let n = "Action build"
+// let v = "1.1.1"
 const uploadBuilds = (key) => {
     return inspect.inspectBuildFilesForUpload(fileList)
         .then(({ buildInfo, fileList }) => {

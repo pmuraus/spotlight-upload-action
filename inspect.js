@@ -122,7 +122,7 @@ inspectFile = (file) => {
   }
 }
 
-inspectContentFile = (file) => {
+inspectContentFile = async (file) => {
   const fState = fs.statSync(file);
   if (fState.isDirectory()) {
     return new Promise((resolve, reject) => {
@@ -140,9 +140,9 @@ inspectContentFile = (file) => {
   const ext = path.extname(file);
   let contentType
   if (ext === '.json') {
-    contentType = swaggerTools.json.getContentType({ path: file })
+    contentType = await swaggerTools.json.getContentType({ path: file })
   } else if (ext === '.yaml') {
-    contentType = swaggerTools.yaml.getContentType({ path: file })
+    contentType = await swaggerTools.yaml.getContentType({ path: file })
   } else {
     contentType = mime.lookup(file)
   }
