@@ -13,7 +13,7 @@ jobs:
     - name: upload build
       uses: pmuraus/spotlight-upload-action@main
       with: 
-        - buildName: "Action build"
-        - buildVersion: "1.1.1"
-        - files: "./README.md,./tools/package.json"
-        - apiKey: ${{secrets.SPOTLIGHT_KEY}}
+        buildName: "Action build"
+        buildVersion: "1.1.1"
+        files: "./README.md,./tools/package.json"
+        apiKey: ${{secrets.SPOTLIGHT_KEY}}
