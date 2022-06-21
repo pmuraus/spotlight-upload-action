@@ -1,7 +1,7 @@
 const core = require('@actions/core');
 const path = require('path');
 const sanitize = require("sanitize-filename");
-const { muver, inspect, log, inuit } = require('spotlight-tools');
+const { muver, inspect, log, Inuit } = require('spotlight-tools');
 
 const BASE_URL = process.env.SPOTLIGHT_URL || 'https://spotlight.inova.si/f';
 const opts = {

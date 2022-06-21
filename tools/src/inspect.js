@@ -4,7 +4,7 @@ const yauzl = require('yauzl');
 const pList = require('simple-plist');
 const log = require('./log');
 const fs = require('fs')
-const { swaggerTools } = require('spotlight-tools')
+const  swaggerTools = require('./swagger-tools')
 
 const CF_BUNDLE_SHORT_VERSION_STRING = 'CFBundleShortVersionString';
 const CF_BUNDLE_DISPLAY_NAME = 'CFBundleDisplayName';

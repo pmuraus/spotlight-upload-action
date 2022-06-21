@@ -3,7 +3,7 @@ const swaggerTools = require('./src/swagger-tools')
 const muver = require('./src/muver')
 const inspect = require('./src/inspect')
 const log = require('./src/log')
-const inuit = require('./src/inuit')
+const Inuit = require('./src/inuit')
 
 module.exports = {
     inspectIpa,
@@ -11,5 +11,5 @@ module.exports = {
     muver,
     inspect,
     log, 
-    inuit
+    Inuit
 }
