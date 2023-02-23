@@ -68,7 +68,7 @@ class Inuit {
 
   async getDestinationUrl(file, headers) {
     const filePath = this.baseUrl + path.posix.join('/upload/createUrl/', file.dest) +  '?key=' + this.apiKey;
-  //  log(`Preparing ${filePath}`);
+    log(`Preparing ${filePath}`);
     return superagent
       .post(filePath)
       .set(headers)
